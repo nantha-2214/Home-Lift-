@@ -1,0 +1,681 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>NaikDown Home Elevators</title>
+<meta name="description" content="NaikDown home elevators, made in our own plant. Helps seniors reach every floor without stairs. 2-year warranty and after-sales service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  :root {
+    --bg: #f6f8fc;
+    --surface: #ffffff;
+    --surface-2: #eaf0fb;
+    --ink: #0f1e3d;
+    --muted: #55657f;
+    --line: #dbe3ef;
+    --blue: #1f5fd6;
+    --blue-strong: #1849a8;
+    --blue-soft: #dce8fd;
+    --on-blue: #ffffff;
+    --shadow: 0 18px 40px -24px rgba(15, 30, 61, .35);
+    --radius: 14px;
+    --display: "Outfit", "Segoe UI", system-ui, sans-serif;
+    --body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0a1120;
+      --surface: #111a2c;
+      --surface-2: #16223a;
+      --ink: #e7edf7;
+      --muted: #97a6bf;
+      --line: #22314c;
+      --blue: #5b8ef0;
+      --blue-strong: #7ea6f5;
+      --blue-soft: #1a2b4d;
+      --on-blue: #071226;
+      --shadow: 0 18px 40px -24px rgba(0, 0, 0, .7);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0a1120;
+    --surface: #111a2c;
+    --surface-2: #16223a;
+    --ink: #e7edf7;
+    --muted: #97a6bf;
+    --line: #22314c;
+    --blue: #5b8ef0;
+    --blue-strong: #7ea6f5;
+    --blue-soft: #1a2b4d;
+    --on-blue: #071226;
+    --shadow: 0 18px 40px -24px rgba(0, 0, 0, .7);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  img, svg { max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); font-weight: 700; }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  p { margin: 0; }
+  .wrap { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: 20px; }
+  section { padding-block: 88px; scroll-margin-top: 64px; }
+  .eyebrow {
+    font-family: var(--display); font-weight: 600; font-size: .85rem;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--blue);
+  }
+  .lead { color: var(--muted); font-size: 1.15rem; max-width: 60ch; }
+  .section-head { display: grid; gap: 14px; margin-bottom: 44px; max-width: 720px; }
+  .accent { color: var(--blue); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 50px; padding: 12px 24px; border-radius: 10px;
+    font-family: var(--display); font-weight: 600; font-size: 1.05rem;
+    text-decoration: none; border: 2px solid transparent; cursor: pointer;
+    transition: background-color .15s, border-color .15s, transform .15s;
+  }
+  .btn-primary { background: var(--blue); color: var(--on-blue); }
+  .btn-primary:hover { background: var(--blue-strong); }
+  .btn-outline { border-color: var(--line); background: var(--surface); color: var(--ink); }
+  .btn-outline:hover { border-color: var(--blue); }
+  .btn:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--blue); outline-offset: 2px;
+  }
+  .icon { width: 22px; height: 22px; flex: none; }
+
+  /* Header */
+  header.site {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; font-size: 1.4rem; text-decoration: none; }
+  .brand svg { width: 30px; height: 30px; color: var(--blue); }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a { text-decoration: none; padding: 8px 12px; border-radius: 8px; color: var(--muted); font-weight: 600; }
+  .nav-links a:hover { color: var(--ink); background: var(--surface-2); }
+  .nav .btn { min-height: 44px; padding: 8px 18px; }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+
+  /* Hero */
+  .hero { padding-block: 64px 88px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 700; letter-spacing: -.02em; }
+  .hero .lead { margin-top: 20px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px;
+    background: var(--blue-soft); color: var(--ink); border-radius: 999px; font-weight: 600; font-size: .95rem;
+  }
+  .chip svg { color: var(--blue); width: 18px; height: 18px; }
+  .hero-art { display: grid; place-items: center; }
+  .hero-art svg { width: 100%; max-width: 380px; height: auto; }
+  @media (max-width: 880px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-art { order: -1; }
+    .hero-art svg { max-width: 260px; }
+  }
+
+  /* Elevator illustration */
+  .shaft { fill: var(--surface); stroke: var(--line); }
+  .floor-line { stroke: var(--line); }
+  .floor-label { fill: var(--muted); font: 600 13px var(--display); letter-spacing: .06em; }
+  .cabin-body { fill: var(--blue-soft); stroke: var(--blue); }
+  .door { fill: var(--surface-2); stroke: var(--blue); }
+  .rail { stroke: var(--blue); }
+  .cable { stroke: var(--muted); }
+  .panel { fill: var(--surface); stroke: var(--line); }
+  .panel-up { fill: var(--blue); }
+  .panel-down { fill: var(--muted); opacity: .5; }
+  .cabin { animation: ride 9s ease-in-out infinite; }
+  @keyframes ride {
+    0%, 15% { transform: translateY(0); }
+    45%, 65% { transform: translateY(-190px); }
+    95%, 100% { transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cabin { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* About */
+  .about { background: var(--surface); border-block: 1px solid var(--line); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .about .lead { margin-top: 18px; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .fact { background: var(--surface); padding: 26px 24px; display: grid; gap: 4px; }
+  .fact strong { font-family: var(--display); font-size: 1.7rem; color: var(--blue); line-height: 1.1; }
+  .fact span { color: var(--muted); }
+  @media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* Feature cards */
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px 24px; display: grid; gap: 12px; align-content: start;
+  }
+  .card p { color: var(--muted); }
+  .icon-box { width: 52px; height: 52px; border-radius: 12px; background: var(--blue-soft); color: var(--blue); display: grid; place-items: center; }
+  .icon-box svg { width: 26px; height: 26px; }
+  @media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+
+  /* Steps */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
+  .step { position: relative; padding-top: 28px; border-top: 3px solid var(--line); display: grid; gap: 10px; align-content: start; }
+  .step::before {
+    counter-increment: step; content: "Step " counter(step);
+    font-family: var(--display); font-weight: 600; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue);
+  }
+  .step:first-child { border-top-color: var(--blue); }
+  .step p { color: var(--muted); }
+  @media (max-width: 1000px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+
+  /* Services */
+  .services { background: var(--surface); border-block: 1px solid var(--line); }
+  .services-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }
+  .service-list { display: grid; gap: 16px; }
+  .service { display: flex; gap: 18px; align-items: flex-start; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+  .service p { color: var(--muted); margin-top: 4px; }
+  .warranty-seal {
+    margin-top: 32px; display: inline-flex; align-items: center; gap: 16px;
+    padding: 18px 22px; border-radius: var(--radius); background: var(--blue); color: var(--on-blue);
+  }
+  .warranty-seal strong { font-family: var(--display); font-size: 2.6rem; line-height: 1; }
+  .warranty-seal span { font-family: var(--display); font-weight: 600; line-height: 1.25; }
+  @media (max-width: 880px) { .services-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* CTA band */
+  .cta { padding-block: 0; }
+  .cta-box {
+    background: var(--ink); color: var(--bg); border-radius: 20px; padding: 48px;
+    display: grid; grid-template-columns: 1.3fr auto; gap: 32px; align-items: center;
+  }
+  .cta-box p { color: color-mix(in srgb, var(--bg) 75%, var(--ink)); margin-top: 12px; font-size: 1.1rem; }
+  .cta-box .btn-outline { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 40%, var(--ink)); }
+  .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  @media (max-width: 880px) { .cta-box { grid-template-columns: 1fr; padding: 32px 24px; } }
+
+  /* Pricing */
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .plan {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 30px 26px; display: flex; flex-direction: column; gap: 16px; position: relative;
+  }
+  .plan.popular { border: 2px solid var(--blue); box-shadow: var(--shadow); }
+  .plan-tag {
+    position: absolute; top: -13px; left: 24px; background: var(--blue); color: var(--on-blue);
+    font: 600 .8rem var(--display); letter-spacing: .08em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px;
+  }
+  .plan-stops { display: flex; gap: 6px; align-items: flex-end; height: 56px; }
+  .plan-stops i { display: block; width: 26px; border-radius: 4px; background: var(--blue-soft); border: 1.5px solid var(--blue); }
+  .plan .floors { color: var(--muted); font-weight: 600; }
+  .plan .price { font-family: var(--display); font-size: 1.5rem; font-weight: 700; }
+  .plan .price small { display: block; font-family: var(--body); font-size: .9rem; font-weight: 400; color: var(--muted); }
+  .plan ul { list-style: none; padding: 16px 0 0; margin: 0; display: grid; gap: 10px; border-top: 1px solid var(--line); }
+  .plan li { display: flex; gap: 10px; align-items: center; }
+  .plan li svg { color: var(--blue); width: 20px; height: 20px; flex: none; }
+  .plan .btn { margin-top: auto; }
+  @media (max-width: 880px) { .plans { grid-template-columns: 1fr; max-width: 460px; } }
+
+  /* FAQ */
+  .faq-list { display: grid; gap: 12px; max-width: 820px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 22px; }
+  summary {
+    cursor: pointer; list-style: none; padding: 16px 0; font-family: var(--display); font-weight: 600; font-size: 1.12rem;
+    display: flex; justify-content: space-between; gap: 16px; align-items: center;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 1.6rem; color: var(--blue); line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); padding-bottom: 18px; max-width: 65ch; }
+
+  /* Contact */
+  .contact { background: var(--surface); border-top: 1px solid var(--line); }
+  .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: start; }
+  form { display: grid; gap: 16px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .field { display: grid; gap: 6px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { font-weight: 600; }
+  input, select, textarea {
+    font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface);
+    border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
+  }
+  textarea { resize: vertical; min-height: 110px; }
+  .form-result { display: grid; gap: 12px; padding: 18px; border-radius: 12px; background: var(--blue-soft); }
+  .form-result pre { margin: 0; white-space: pre-wrap; font: inherit; font-size: .95rem; color: var(--ink); }
+  .contact-info { display: grid; gap: 12px; }
+  .info { display: flex; gap: 16px; align-items: flex-start; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+  .info b { display: block; font-family: var(--display); font-weight: 600; }
+  .info span, .info a { color: var(--muted); overflow-wrap: anywhere; }
+  .info a:hover { color: var(--blue); }
+  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } form { padding: 20px; } }
+
+  footer.site { padding-block: 40px; border-top: 1px solid var(--line); color: var(--muted); }
+  .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
+  .footer-row nav { display: flex; flex-wrap: wrap; gap: 18px; }
+  .footer-row nav a { text-decoration: none; }
+  .footer-row nav a:hover { color: var(--ink); }
+</style>
+
+<!-- Icons used across the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18"/><path d="m6 10 1.5-2 1.5 2"/><path d="m15 14 1.5 2 1.5-2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+    <symbol id="i-updown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  </defs>
+</svg>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="NaikDown home">
+      <svg aria-hidden="true"><use href="#i-logo"/></svg>
+      NaikDown
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#why">Why NaikDown</a>
+      <a href="#pricing">Floors &amp; Price</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Get a Quote</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Home elevators · Made in our own plant</p>
+        <h1 style="margin-top:14px">No more stairs. Reach <span class="accent">every floor</span> with ease.</h1>
+        <p class="lead">NaikDown builds home lifts in our own factory, so parents and grandparents with knee pain or illness can go to any floor safely, without climbing the stairs.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get a Free Quote</a>
+          <a class="btn btn-outline" data-tel href="#contact">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span data-phone>+91 00000 00000</span>
+          </a>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg aria-hidden="true"><use href="#i-shield"/></svg>2-Year Warranty</span>
+          <span class="chip"><svg aria-hidden="true"><use href="#i-wrench"/></svg>After-Sales Service</span>
+          <span class="chip"><svg aria-hidden="true"><use href="#i-factory"/></svg>Factory Direct</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <svg viewBox="0 0 320 420" role="img" aria-label="A NaikDown lift moving between the ground floor and first floor">
+          <line class="floor-line" x1="0" y1="200" x2="320" y2="200" stroke-width="2"/>
+          <line class="floor-line" x1="0" y1="400" x2="320" y2="400" stroke-width="2"/>
+          <text class="floor-label" x="4" y="190">FIRST FLOOR</text>
+          <text class="floor-label" x="4" y="390">GROUND</text>
+          <rect class="shaft" x="96" y="10" width="140" height="390" rx="10" stroke-width="2"/>
+          <g class="cabin">
+            <line class="cable" x1="166" y1="-180" x2="166" y2="216" stroke-width="2" stroke-dasharray="4 4"/>
+            <rect class="cabin-body" x="108" y="216" width="116" height="176" rx="8" stroke-width="3"/>
+            <rect class="door" x="118" y="228" width="46" height="152" rx="3" stroke-width="1.5"/>
+            <rect class="door" x="168" y="228" width="46" height="152" rx="3" stroke-width="1.5"/>
+            <line class="rail" x1="122" y1="318" x2="210" y2="318" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <rect class="panel" x="252" y="300" width="30" height="60" rx="6" stroke-width="2"/>
+          <path class="panel-up" d="M267 312 l7 10 h-14 z"/>
+          <path class="panel-down" d="M267 348 l7 -10 h-14 z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">About us</p>
+        <h2 style="margin-top:12px">We build every lift <span class="accent">ourselves</span></h2>
+        <p class="lead">NaikDown designs and fabricates elevators for homes in our own manufacturing plant. Because we make every lift ourselves, we control quality from raw material to final installation, and we size each one to fit your house. Every lift comes with a 2-year warranty and after-sales service from our own team.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>In-house</strong><span>Manufacturing plant</span></div>
+        <div class="fact"><strong>2 Years</strong><span>Warranty on every lift</span></div>
+        <div class="fact"><strong>Custom</strong><span>Built to fit your home</span></div>
+        <div class="fact"><strong>Our team</strong><span>After-sales service</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why families choose NaikDown</p>
+        <h2>Made for the people who find stairs hard</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-heart"/></svg></div>
+          <h3>No more painful stairs</h3>
+          <p>For seniors with knee pain or arthritis, or anyone recovering from illness or surgery: one button takes them to the floor they need.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <h3>Built for safety</h3>
+          <p>A smooth start and stop, a handrail inside the cabin, and safety features chosen with elderly users in mind.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-home"/></svg></div>
+          <h3>Fits your home</h3>
+          <p>We fabricate each lift for your space and number of floors, in new houses or existing ones.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-updown"/></svg></div>
+          <h3>Easy to use</h3>
+          <p>Simple, clearly marked controls that anyone in the family can use without help.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From your first call to your first ride</h2>
+        <p class="lead">One team handles everything, so you only deal with us.</p>
+      </div>
+      <ol class="steps">
+        <li class="step"><h3>Free site visit</h3><p>We visit your home, check the space, and understand who will use the lift.</p></li>
+        <li class="step"><h3>Custom design</h3><p>We design the lift for your floors and space, and give you a clear quotation.</p></li>
+        <li class="step"><h3>Fabrication</h3><p>Your lift is fabricated and checked in our own manufacturing plant.</p></li>
+        <li class="step"><h3>Installation</h3><p>We install and test it, and show your family how to use it. The warranty starts at handover.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="services" id="service">
+    <div class="wrap services-grid">
+      <div>
+        <p class="eyebrow">Warranty &amp; service</p>
+        <h2 style="margin-top:12px">We stay with you after installation</h2>
+        <p class="lead" style="margin-top:16px">A home lift is part of your family's daily life for years. Our support doesn't end on installation day.</p>
+        <div class="warranty-seal">
+          <strong>2</strong>
+          <span>Year warranty<br>on every lift</span>
+        </div>
+      </div>
+      <div class="service-list">
+        <div class="service">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <div><h3>2-year warranty</h3><p>Every NaikDown lift is covered for 2 years from the date of installation.</p></div>
+        </div>
+        <div class="service">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-headset"/></svg></div>
+          <div><h3>After-sales service</h3><p>Our own service team handles maintenance and repairs, so your lift keeps running smoothly.</p></div>
+        </div>
+        <div class="service">
+          <div class="icon-box"><svg aria-hidden="true"><use href="#i-factory"/></svg></div>
+          <div><h3>Direct from our factory</h3><p>You deal directly with the people who build your lift. No middlemen.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" style="padding-top:88px">
+    <div class="wrap">
+      <div class="cta-box">
+        <div>
+          <h2>Are the stairs getting hard for someone at home?</h2>
+          <p>Book a free site visit. We'll check your home and suggest the right lift, with no obligation.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#contact">Book a Free Site Visit</a>
+          <a class="btn btn-outline" data-tel href="#contact">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Floors &amp; price</p>
+        <h2>Choose by number of floors</h2>
+        <p class="lead">The price depends on your floors, space and finish. Contact us for an exact quote for your home.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <div class="plan-stops" aria-hidden="true"><i style="height:28px"></i><i style="height:56px"></i></div>
+          <h3>2 Floors</h3>
+          <p class="floors">Ground + 1 · 2 stops</p>
+          <!-- To show a price, replace the line below, e.g. <p class="price"><small>Starting at</small>₹ X,XX,XXX</p> -->
+          <p class="price">Price on request</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>2-year warranty</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>After-sales service</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free site visit</li>
+          </ul>
+          <a class="btn btn-outline" href="#contact" data-floors="2 floors (G+1)">Get Price</a>
+        </article>
+        <article class="plan popular">
+          <span class="plan-tag">Most popular</span>
+          <div class="plan-stops" aria-hidden="true"><i style="height:19px"></i><i style="height:37px"></i><i style="height:56px"></i></div>
+          <h3>3 Floors</h3>
+          <p class="floors">Ground + 2 · 3 stops</p>
+          <p class="price">Price on request</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>2-year warranty</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>After-sales service</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free site visit</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact" data-floors="3 floors (G+2)">Get Price</a>
+        </article>
+        <article class="plan">
+          <div class="plan-stops" aria-hidden="true"><i style="height:14px"></i><i style="height:28px"></i><i style="height:42px"></i><i style="height:56px"></i></div>
+          <h3>4+ Floors</h3>
+          <p class="floors">Ground + 3 or more</p>
+          <p class="price">Price on request</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>2-year warranty</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>After-sales service</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free site visit</li>
+          </ul>
+          <a class="btn btn-outline" href="#contact" data-floors="4 floors (G+3)">Get Price</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How much does a home elevator cost?</summary>
+          <p>It depends on the number of floors, the space available and the finish you choose. After a free site visit, we give you an exact quotation.</p>
+        </details>
+        <details>
+          <summary>Can a lift be installed in my existing house?</summary>
+          <p>In many cases, yes. During the site visit, our team checks the space and tells you the best option for your home.</p>
+        </details>
+        <details>
+          <summary>How many floors can the elevator serve?</summary>
+          <p>We build lifts for 2 floors (G+1), 3 floors (G+2) and taller homes. Tell us how many floors you have and we'll design for it.</p>
+        </details>
+        <details>
+          <summary>Is it safe and easy for elderly people to use?</summary>
+          <p>Yes. Our lifts are designed for seniors and people with knee problems or illness, with simple controls and a smooth ride.</p>
+        </details>
+        <details>
+          <summary>What does the warranty cover?</summary>
+          <p>Every NaikDown lift has a 2-year warranty from installation, and our after-sales team continues to provide service and maintenance after that.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact us</p>
+        <h2>Get the price and details for your home</h2>
+        <p class="lead">Tell us about your home. We'll call you back with a quote.</p>
+      </div>
+      <div class="contact-grid">
+        <form id="enquiry" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone number</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-city">City</label>
+              <input id="f-city" name="city" autocomplete="address-level2">
+            </div>
+            <div class="field">
+              <label for="f-floors">Number of floors</label>
+              <select id="f-floors" name="floors">
+                <option>2 floors (G+1)</option>
+                <option selected>3 floors (G+2)</option>
+                <option>4 floors (G+3)</option>
+                <option>5 or more floors</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-message">Message (optional)</label>
+            <textarea id="f-message" name="message" placeholder="For example: for my mother, who has knee pain. Duplex house."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+            Send Enquiry on WhatsApp
+          </button>
+          <p id="form-error" class="lead" style="font-size:1rem" hidden>Please enter your name and phone number.</p>
+          <div id="form-result" class="form-result" hidden>
+            <b>Your enquiry is ready. Tap below to send it to us on WhatsApp.</b>
+            <pre id="form-text"></pre>
+            <a id="form-link" class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="#">Open WhatsApp</a>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <div class="info">
+            <div class="icon-box"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+            <div><b>Call us</b><a data-tel href="#contact"><span data-phone>+91 00000 00000</span></a></div>
+          </div>
+          <div class="info">
+            <div class="icon-box"><svg aria-hidden="true"><use href="#i-chat"/></svg></div>
+            <div><b>WhatsApp</b><a data-wa href="#contact" target="_blank" rel="noopener noreferrer"><span data-phone>+91 00000 00000</span></a></div>
+          </div>
+          <div class="info">
+            <div class="icon-box"><svg aria-hidden="true"><use href="#i-mail"/></svg></div>
+            <div><b>Email</b><a data-mail href="#contact"><span data-email>sales@your-domain.com</span></a></div>
+          </div>
+          <div class="info">
+            <div class="icon-box"><svg aria-hidden="true"><use href="#i-pin"/></svg></div>
+            <div><b>Visit our plant</b><span data-address>NaikDown Manufacturing Plant, Your City, Your State</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-row">
+    <span>© <span id="year">2026</span> NaikDown. Home elevators with a 2-year warranty.</span>
+    <nav aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#pricing">Floors &amp; Price</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // ===== Edit your contact details here =====
+  var CONFIG = {
+    phone: "+91 00000 00000",
+    whatsapp: "910000000000", // digits only, with country code
+    email: "sales@your-domain.com",
+    address: "NaikDown Manufacturing Plant, Your City, Your State"
+  };
+  // ==========================================
+
+  var waBase = "https://wa.me/" + CONFIG.whatsapp;
+  function each(sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
+
+  each("[data-phone]", function (el) { el.textContent = CONFIG.phone; });
+  each("[data-email]", function (el) { el.textContent = CONFIG.email; });
+  each("[data-address]", function (el) { el.textContent = CONFIG.address; });
+  each("[data-tel]", function (el) { el.href = "tel:" + CONFIG.phone.replace(/\s/g, ""); });
+  each("[data-wa]", function (el) { el.href = waBase; });
+  each("[data-mail]", function (el) { el.href = "mailto:" + CONFIG.email; });
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // "Get Price" buttons pre-select the floor count in the form.
+  var floorsSelect = document.getElementById("f-floors");
+  each("[data-floors]", function (el) {
+    el.addEventListener("click", function () { floorsSelect.value = el.getAttribute("data-floors"); });
+  });
+
+  // The form builds a WhatsApp message, so no server is needed.
+  var form = document.getElementById("enquiry");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = new FormData(form);
+    var name = (d.get("name") || "").trim();
+    var phone = (d.get("phone") || "").trim();
+    document.getElementById("form-error").hidden = !!(name && phone);
+    if (!name || !phone) return;
+    var lines = [
+      "Hello NaikDown, I'm interested in a home elevator.",
+      "Name: " + name,
+      "Phone: " + phone,
+      d.get("city") ? "City: " + d.get("city") : "",
+      "Floors: " + d.get("floors"),
+      d.get("message") ? "Message: " + d.get("message") : ""
+    ].filter(Boolean);
+    var text = lines.join("\n");
+    document.getElementById("form-text").textContent = text;
+    document.getElementById("form-link").href = waBase + "?text=" + encodeURIComponent(text);
+    document.getElementById("form-result").hidden = false;
+  });
+</script>
+
+</body></html>
